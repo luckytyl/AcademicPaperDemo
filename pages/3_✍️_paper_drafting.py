@@ -69,7 +69,6 @@ if mode == "📋 生成论文大纲":
                 result = st.write_stream(stream_glm(DRAFT_OUTLINE, context))
                 st.session_state["outline"] = result
                 st.session_state["research_content_draft"] = research_content
-                st.session_state["step3_done"] = True
             except Exception as e:
                 st.error(f"模型调用失败，请检查 API 配置：{e}")
 
@@ -133,6 +132,8 @@ if drafted:
 # ── 底部 ──
 st.markdown("---")
 if st.session_state.get("step3_done"):
-    st.markdown("✅ **撰写完成！** 点击左侧 **🔧 润色翻译** 进入下一步。")
+    st.markdown("✅ **章节已生成！** 点击上方「📋 复制全部内容到 Step 4 润色」，或继续撰写更多章节。")
+elif st.session_state.get("outline"):
+    st.markdown("💡 大纲已生成，请切换到「📝 撰写章节内容」模式逐章节撰写。")
 else:
-    st.markdown("💡 生成的大纲和章节内容会自动传递给后续步骤。")
+    st.markdown("💡 建议先生成大纲，再逐章节撰写内容，最后复制到 Step 4 润色。")
