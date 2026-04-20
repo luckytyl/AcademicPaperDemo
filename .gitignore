@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+.streamlit/secrets.toml
+.lit_search_cache/
+.citation_verify_cache/
+.DS_Store
+.claude/
