@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 ### 2. 配置 API
 
-复制 `.env.template` 为 `.env`，填入 GLM-5 API Token：
+复制 `.env.template` 为 `.env`，填入  API Token：
 
 ```bash
 cp .env.template .env
@@ -48,7 +48,7 @@ cp .env.template .env
 ```
 ANTHROPIC_BASE_URL=https://open.bigmodel.cn/api/anthropic
 ANTHROPIC_AUTH_TOKEN=your_token_here
-ANTHROPIC_MODEL=GLM-5
+ANTHROPIC_MODEL=
 ```
 
 ### 3. 启动
